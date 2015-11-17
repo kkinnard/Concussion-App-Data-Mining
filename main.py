@@ -10,6 +10,19 @@ from csv_analyze import *
 # Conc_list will be the list of the demographics for the concussed
 # Cont_list will be the list of the demographics for the control
 
+import csv
+import sys
+import os
+
+with open('Concussion.csv', newline='') as csvfile:
+	spamreader = csv.reader(csvfile, delimiter=',', quotechar='|')
+	for row in spamreader:
+
+with open('Control.csv', newline='') as csvfile:
+	spamreader = csv.reader(csvfile, delimiter=',', quotechar='|')
+	for row in spamreader:
+
+
 conc_rows = 94 # Start at 0.
 conc_columns = 11
 cont_rows = 485
