@@ -2,6 +2,8 @@
 
 #!/usr/bin/python
 
+from 
+
 import csv
 import sys
 import os
@@ -20,10 +22,10 @@ conc_columns = 11
 cont_rows = 485
 cont_columns = 11
 
-with open('CSV\ Files/Control.csv', 'rU') as f:
+with open('Concussion.csv', 'rU') as f:
 	conc_list = csv.reader(f)
 	
-with open('CSV\ Files/Control.csv', 'rU') as f:
+with open('Control.csv', 'rU') as f:
 	cont_list = csv.reader(f)
 	
 
@@ -43,7 +45,13 @@ days_format(cont_list, cont_rows)
 conc_average = average_array(conc_list, conc_rows, conc_columns)
 cont_average = average_array(cont_list, cont_rows, cont_columns)
 
+<<<<<<< HEAD
 difference = percent_difference(conc_average, cont_average)
 #Will return difference, where positive means higher incidence in Concussed thanthe control.
 
 print difference
+=======
+#for row in ****_list:
+	#for value in row:
+		#print value
+>>>>>>> 14d3851cdb51d61079b6ed10d687524bf532774e
