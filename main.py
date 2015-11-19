@@ -39,4 +39,6 @@ age_format(Cont_list, cont_rows)
 days_format(Conc_list, conc_rows)
 days_format(Cont_list, cont_rows)
 
-
+#for row in ****_list:
+	#for value in row:
+		#print value
