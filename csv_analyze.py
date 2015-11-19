@@ -1,4 +1,4 @@
-# Analyze the arrays.
+nalyze the arrays.
 
 #!/usr/bin/python
 

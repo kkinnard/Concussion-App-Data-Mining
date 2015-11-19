@@ -30,4 +30,3 @@ def days_format(list, num_rows):
 			list[i][1] = 4
 		elif list[i][1] > 20:
 			list[i][1] = 5
-
