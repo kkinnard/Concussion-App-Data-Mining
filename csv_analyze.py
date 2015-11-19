@@ -13,4 +13,13 @@ def average_array(list, num_rows, num_columns):
   	for k in range(0, num_columns):
 		average[i] = sum[i] / num_columns
 
+	return average	
+
+def percent_difference(list1, list2, num_columns):
+	difference = [0] * num_columns
+	#Find the difference between the control and the concussed
+	for i in range(0, num_columns):
+		difference[i] = list1[i] - list2[i]
+	
+	return difference
 

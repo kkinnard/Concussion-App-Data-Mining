@@ -20,12 +20,15 @@ conc_columns = 11
 cont_rows = 485
 cont_columns = 11
 
-with open('CSV\ Files/Concussion.csv', 'rU') as f:
-	conc_list = csv.reader(f)
+with open('Control.csv', 'rU') as f:
+	reader = csv.reader(f)
+	conc_list = list(list(rec) for rec in csv.reader(f, delimiter=','))
 	
-with open('CSV\ Files/Control.csv', 'rU') as f:
-	cont_list = csv.reader(f)
+with open('Control.csv', 'rU') as f:
+	reader = csv.reader(f)
+	cont_list = list(list(rec) for rec in csv.reader(f, delimiter=','))
 	
+
 conc_rows = 94 # Start at 0.
 conc_columns = 11
 cont_rows = 485
@@ -33,12 +36,18 @@ cont_columns = 11
 
 # Edit the input for day range and days symptoms lasted.
 # The rest of the data is 1's and 0's.
-age_format(Conc_list, conc_rows)
-age_format(Cont_list, cont_rows)
+age_format(conc_list, conc_rows)
+age_format(cont_list, cont_rows)
 
-days_format(Conc_list, conc_rows)
-days_format(Cont_list, cont_rows)
+days_format(conc_list, conc_rows)
+days_format(cont_list, cont_rows)
 
-#for row in ****_list:
-	#for value in row:
-		#print value
+conc_average = average_array(conc_list, conc_rows, conc_columns)
+cont_average = average_array(cont_list, cont_rows, cont_columns)
+
+
+difference = percent_difference(conc_average, cont_average)
+#Will return difference, where positive means higher incidence in Concussed thanthe control.
+
+print difference
+
