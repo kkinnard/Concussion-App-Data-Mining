@@ -2,7 +2,7 @@
 
 #!/usr/bin/python
 
-from 
+from __future__ import with_statement 
 
 import csv
 import sys
@@ -45,13 +45,7 @@ days_format(cont_list, cont_rows)
 conc_average = average_array(conc_list, conc_rows, conc_columns)
 cont_average = average_array(cont_list, cont_rows, cont_columns)
 
-<<<<<<< HEAD
 difference = percent_difference(conc_average, cont_average)
 #Will return difference, where positive means higher incidence in Concussed thanthe control.
 
 print difference
-=======
-#for row in ****_list:
-	#for value in row:
-		#print value
->>>>>>> 14d3851cdb51d61079b6ed10d687524bf532774e
