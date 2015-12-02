@@ -23,7 +23,7 @@ conc_columns = 11
 cont_rows = 485
 cont_columns = 11
 
-with open('Control.csv', 'rU') as f:
+with open('Concussion.csv', 'rU') as f:
 	reader = csv.reader(f)
 	conc_list = list(list(rec) for rec in csv.reader(f, delimiter=','))
 	
@@ -32,9 +32,7 @@ with open('Control.csv', 'rU') as f:
 	cont_list = list(list(rec) for rec in csv.reader(f, delimiter=','))
 
 cont_format_list = cont_format(cont_list, cont_rows, cont_columns)
-
-#print cont_list
-#print cont_format_list 
+conc_format_list = conc_format(conc_list, conc_rows, conc_columns)
 
 # Edit the input for day range and days symptoms lasted.
 # The rest of the data is 1's and 0's.
