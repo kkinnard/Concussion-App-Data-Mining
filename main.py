@@ -36,14 +36,14 @@ conc_format_list = conc_format(conc_list, conc_rows, conc_columns)
 
 # Edit the input for day range and days symptoms lasted.
 # The rest of the data is 1's and 0's.
-age_format(conc_list, conc_rows)
-age_format(cont_list, cont_rows)
+age_format(conc_format_list, conc_rows)
+age_format(cont_format_list, cont_rows)
 
-days_format(conc_list, conc_rows)
-days_format(cont_list, cont_rows)
+conc_average = average_array(conc_format_list, conc_rows, conc_columns)
+cont_average = average_array(cont_format_list, cont_rows, cont_columns)
 
-conc_average = average_array(conc_list, conc_rows, conc_columns)
-cont_average = average_array(cont_list, cont_rows, cont_columns)
+print conc_average
 
-difference = percent_difference(conc_average, cont_average)
+difference = percent_difference(conc_average, cont_average, conc_columns)
+
 #Will return difference, where positive means higher incidence in Concussed thanthe control.

@@ -14,9 +14,7 @@ def cont_format(cont_list, cont_rows, cont_columns):
 	for k in range(1, cont_rows + 1):
 		for l in range(2, 10):
 			cont_format_list[k - 1][l] = int(cont_list[k][l + 3])
-
-	print cont_format_list
-
+	
 	return cont_format_list
 	
 def conc_format(conc_list, conc_rows, conc_columns):
@@ -31,7 +29,5 @@ def conc_format(conc_list, conc_rows, conc_columns):
 	for k in range(1, conc_rows + 1):
 		for l in range(2, 10):
 			conc_format_list[k - 1][l] = int(conc_list[k][l + 3])
-
-	print conc_format_list
 
 	return conc_format_list	
