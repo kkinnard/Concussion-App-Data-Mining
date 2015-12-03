@@ -9,11 +9,8 @@ def average_array(list, num_rows, num_columns):
 		for j in range(0, num_rows):
 			sum[i] = sum[i] + list[j][i]
 	# Find the average for each of these categories
-	print num_rows
-	print sum
 	average = [(x / float(num_rows)) for x in sum]
 	
-	print average
 	return average	
 
 def percent_difference(list1, list2, num_columns):
@@ -23,4 +20,3 @@ def percent_difference(list1, list2, num_columns):
 		difference[i] = list1[i] - list2[i]
 	
 	return difference
-

@@ -18,10 +18,10 @@ from array_format import *
 # Cont_list will be the list of the demographics for the control
 
 # Matrices for the data in each CSV file
-conc_rows = 94 # Start at 0.
-conc_columns = 11
+conc_rows = 95 # Start at 0.
+conc_columns = 10
 cont_rows = 485
-cont_columns = 11
+cont_columns = 10
 
 with open('Concussion.csv', 'rU') as f:
 	reader = csv.reader(f)
@@ -42,8 +42,8 @@ age_format(cont_format_list, cont_rows)
 conc_average = average_array(conc_format_list, conc_rows, conc_columns)
 cont_average = average_array(cont_format_list, cont_rows, cont_columns)
 
-print conc_average
-
 difference = percent_difference(conc_average, cont_average, conc_columns)
+
+print difference
 
 #Will return difference, where positive means higher incidence in Concussed thanthe control.
