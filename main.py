@@ -42,6 +42,11 @@ age_format(cont_format_list, cont_rows)
 conc_average = average_array(conc_format_list, conc_rows, conc_columns)
 cont_average = average_array(cont_format_list, cont_rows, cont_columns)
 
+print "Concussion averages"
+print conc_average
+print "Control averages"
+print cont_average
+
 difference = percent_difference(conc_average, cont_average, conc_columns)
 
 print difference

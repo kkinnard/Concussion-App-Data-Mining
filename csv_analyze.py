@@ -17,6 +17,6 @@ def percent_difference(list1, list2, num_columns):
 	difference = [0] * num_columns
 	#Find the difference between the control and the concussed
 	for i in range(0, num_columns):
-		difference[i] = list1[i] - list2[i]
+		difference[i] = list1[i] / list2[i]
 	
 	return difference
